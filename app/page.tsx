@@ -1,5 +1,6 @@
 import Navbar from '@/components/layout/Navbar';
 import About from '@/components/layout/About';
+import Work from '@/components/sections/Work';
 
 export default function Home() {
   return (
@@ -12,17 +13,17 @@ export default function Home() {
       </section>
 
       {/* Sections with IDs for the Navbar */}
-      <section id="about" className="py-32 px-6 max-w-6xl mx-auto">
+      <section id="about" className="py-18 px-6 max-w-6xl mx-auto">
         <About />
       </section>
 
-      <section id="work" className="py-32 px-6 max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold uppercase mb-8">// Work</h2>
-        {/* Your projects */}
+      <section id="work" className="px-6 max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold uppercase mb-8">Professional Experience</h2>
+        <Work />
       </section>
 
       <section id="contact" className="py-32 px-6 max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold uppercase mb-8">// Contact</h2>
+        <h2 className="text-4xl font-bold uppercase mb-8">Contact</h2>
         <p>Email: you@example.com</p>
       </section>
     </main>
