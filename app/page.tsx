@@ -1,6 +1,7 @@
 import Navbar from '@/components/layout/Navbar';
 import About from '@/components/layout/About';
 import Work from '@/components/sections/Work';
+import Contact from '@/components/sections/Contact';
 
 export default function Home() {
   return (
@@ -22,9 +23,9 @@ export default function Home() {
         <Work />
       </section>
 
-      <section id="contact" className="py-32 px-6 max-w-6xl mx-auto">
+      <section id="contact" className="py-18 px-6 max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold uppercase mb-8">Contact</h2>
-        <p>Email: you@example.com</p>
+        <Contact/>
       </section>
     </main>
   );

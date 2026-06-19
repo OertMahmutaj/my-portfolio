@@ -19,7 +19,7 @@ export default function Navbar() {
           onClick={closeMenu}
           className="font-bold tracking-tighter uppercase text-xl hover:opacity-70 transition duration-200"
         >
-          Oert Mahmutaj //
+          Oert Mahmutaj
         </Link>
 
         {/* Minimalist Hamburger Button Trigger */}

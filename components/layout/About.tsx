@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 'use client';
+import React from 'react';
 import { useState } from 'react';
 
 export default function About() {
@@ -10,7 +11,7 @@ export default function About() {
       {/* Intro Text */}
       <div className="mb-16">
         <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-tight">About</h2>
-        <p className="text-2xl md:text-5xl font-black tracking-tighter uppercase leading-tight">
+        <p className="py-5 text-2xl md:text-5xl font-black tracking-tighter uppercase leading-tight">
           I bridge the gap between <span className="underline">technical execution</span> and <span className="underline">commercial performance</span>.
         </p>
       </div>
