@@ -30,7 +30,7 @@ export default function Work() {
   ];
 
   return (
-    <section id="work" className="px-6 max-w-4xl mx-auto border-b border-black/10">
+    <section id="work" className="py-5 px-6 max-w-4xl mx-auto border-b border-black/10">
       {/* <h2 className="text-sm font-mono opacity-60 mb-16">// Professional Experience</h2> */}
       
       <div className="space-y-24">

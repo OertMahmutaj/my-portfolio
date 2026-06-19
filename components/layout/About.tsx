@@ -6,7 +6,7 @@ export default function About() {
   const [active, setActive] = useState<'dev' | 'sales'>('dev');
 
   return (
-    <section id="about" className="px-6 max-w-4xl mx-auto border-b border-black/10">
+    <section id="about" className="py-5 px-6 max-w-4xl mx-auto border-b border-black/10">
       {/* Intro Text */}
       <div className="mb-16">
         <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-tight">About</h2>
