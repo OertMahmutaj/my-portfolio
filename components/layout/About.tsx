@@ -2,18 +2,29 @@
 'use client';
 import React from 'react';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function About() {
   const [active, setActive] = useState<'dev' | 'sales' | 'other'>('dev');
 
   return (
     <section id="about" className="py-5 px-6 max-w-4xl mx-auto border-b border-black/10">
-      {/* Intro Text */}
-      <div className="mb-16">
-        <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-tight">About</h2>
+      {/* Container for Text and Image */}
+      <div className="flex justify-between items-start gap-8 mb-16">
         <p className="py-5 text-2xl md:text-5xl font-black tracking-tighter uppercase leading-tight">
-          I bridge the gap between <span className="underline">technical execution</span> and <span className="underline">commercial performance</span>.
+          A little <span className="underline">bit</span> about <span className="underline">me</span>.
         </p>
+        
+        {/* Smaller Image container */}
+        <div className="flex-shrink-0 w-32 md:w-40 h-auto overflow-hidden rounded-xl border border-black/10">
+          <Image
+            src="/proffesional_picture.jpg"
+            alt="Oert Mahmutaj"
+            width={200}
+            height={200}
+            className="grayscale hover:grayscale-0 transition-all duration-500"
+          />
+        </div>
       </div>
 
       {/* Switcher Buttons */}
