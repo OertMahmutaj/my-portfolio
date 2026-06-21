@@ -15,22 +15,30 @@ export default function Navbar() {
       {/* Structural Fixed Top Bar Header */}
       <header className="fixed top-0 left-0 w-full h-20 bg-[#dbc87d]/80 backdrop-blur-md border-b border-black/10 z-50 flex items-center justify-between px-6 transition-colors duration-300">
 
-        <Link
-          href="/"
-          onClick={(_e) => {
-            closeMenu();
+        {/* Group: Name + Resume Link */}
+        <div className="flex items-center gap-6">
+          <Link
+            href="/"
+            onClick={(e) => {
+              closeMenu();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="font-bold tracking-tighter uppercase text-xl hover:opacity-70 transition duration-200"
+          >
+            Oert Mahmutaj
+          </Link>
 
-            window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            });
-          }}
-          className="font-bold tracking-tighter uppercase text-xl hover:opacity-70 transition duration-200"
-        >
-          Oert Mahmutaj
-        </Link>
+          <a
+            href="/Oert_Mahmutaj_P.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-black px-4 py-1 uppercase tracking-widest text-[10px] hover:bg-black hover:text-[#dbc87d] transition-all"
+          >
+            View Resume
+          </a>
+        </div>
 
-        {/* Minimalist Hamburger Button Trigger */}
+        {/* Hamburger Button */}
         <button
           onClick={toggleMenu}
           aria-label="Toggle Navigation Menu"
