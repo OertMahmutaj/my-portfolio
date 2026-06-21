@@ -4,7 +4,7 @@ import React from 'react';
 import { useState } from 'react';
 
 export default function About() {
-  const [active, setActive] = useState<'dev' | 'sales'>('dev');
+  const [active, setActive] = useState<'dev' | 'sales' | 'other'>('dev');
 
   return (
     <section id="about" className="py-5 px-6 max-w-4xl mx-auto border-b border-black/10">
@@ -30,6 +30,12 @@ export default function About() {
         >
           Sales Skills
         </button>
+        <button 
+          onClick={() => setActive('other')}
+          className={`font-mono text-xs uppercase tracking-widest px-6 py-2 border border-black transition-all ${active === 'other' ? 'bg-black text-[#dbc87d]' : 'bg-transparent hover:bg-black/5'}`}
+        >
+          Other Skills
+        </button>
       </div>
 
       {/* Dynamic Content Area */}
@@ -39,10 +45,15 @@ export default function About() {
             <h3 className="font-bold text-xl uppercase">// Technical Arsenal</h3>
             <p className="text-lg opacity-80">Building scalable, high-performance web applications using the modern stack: React 19, Next.js 16, TypeScript, and Tailwind CSS. I prioritize clean, modular code that scales.</p>
           </div>
-        ) : (
+        ) : active === 'sales' ? (
           <div className="space-y-4">
             <h3 className="font-bold text-xl uppercase">// Commercial Strategy</h3>
             <p className="text-lg opacity-80">I treat every project as a sales channel. From conversion rate optimization to user journey design, I ensure that every pixel served has a business purpose.</p>
+          </div>
+        ) : (
+          <div className="space-y-4">
+            <h3 className="font-bold text-xl uppercase">// Linguistic & Creative</h3>
+            <p className="text-lg opacity-80">Fluent in German, English, Italian, and Albanian. My background in figure drawing and creative arts fuels my attention to detail, visual hierarchy, and user-centric problem solving.</p>
           </div>
         )}
       </div>

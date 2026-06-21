@@ -2,6 +2,7 @@ import Navbar from '@/components/layout/Navbar';
 import About from '@/components/layout/About';
 import Work from '@/components/sections/Work';
 import Contact from '@/components/sections/Contact';
+import Education from '@/components/sections/Education';
 
 export default function Home() {
   return (
@@ -21,6 +22,10 @@ export default function Home() {
       <section id="work" className="px-6 max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold uppercase mb-8">Professional Experience</h2>
         <Work />
+      </section>
+      <section id="contact" className="py-10 px-6 max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold uppercase mb-8">Education</h2>
+        <Education/>
       </section>
 
       <section id="contact" className="py-18 px-6 max-w-6xl mx-auto">

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 
 import React, { useState } from 'react';
@@ -13,10 +14,17 @@ export default function Navbar() {
     <>
       {/* Structural Fixed Top Bar Header */}
       <header className="fixed top-0 left-0 w-full h-20 bg-[#dbc87d]/80 backdrop-blur-md border-b border-black/10 z-50 flex items-center justify-between px-6 transition-colors duration-300">
-        
-        <Link 
-          href="/" 
-          onClick={closeMenu}
+
+        <Link
+          href="/"
+          onClick={(_e) => {
+            closeMenu();
+
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          }}
           className="font-bold tracking-tighter uppercase text-xl hover:opacity-70 transition duration-200"
         >
           Oert Mahmutaj
@@ -42,22 +50,21 @@ export default function Navbar() {
       {/* Full-Screen Backdrop Overlay Mask */}
       <div
         onClick={closeMenu}
-        className={`fixed inset-0 bg-black/20 backdrop-blur-sm z-40 transition-opacity duration-300 ${
-          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
+        className={`fixed inset-0 bg-black/20 backdrop-blur-sm z-40 transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
       />
 
       {/* Sliding Minimalist Sidebar Panel */}
       <nav className={`fixed top-0 right-0 h-screen w-full sm:w-[380px] bg-[#dbc87d] border-l border-black/10 p-12 pt-32 flex flex-col justify-between transform transition-transform duration-500 ease-in-out z-45 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex flex-col space-y-8 font-black text-5xl tracking-tighter uppercase">
-          {['About', 'Work', 'Contact'].map((item) => (
+          {['About', 'Work', 'Education', 'Contact'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase().replace(' ', '-')}`}
               onClick={closeMenu}
               className="text-left hover:opacity-50 transition duration-200 flex items-baseline gap-4 cursor-pointer"
             >
-              <span className="font-mono text-base opacity-40">0{['About', 'Work', 'Contact'].indexOf(item) + 1}</span> 
+              <span className="font-mono text-base opacity-40">0{['About', 'Work', 'Education', 'Contact'].indexOf(item) + 1}</span>
               {item}
             </a>
           ))}
